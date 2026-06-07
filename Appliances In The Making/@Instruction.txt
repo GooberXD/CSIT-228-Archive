@@ -1,0 +1,29 @@
+For this program, you are tasked to define the following:
+Class - Appliance:
+
+Private Fields:
+private String brand: Represents the brand of the appliance.
+private double powerUsage: Represents the power usage in watts.
+private boolean isOn: Tracks whether the appliance is turned on or off.
+Constructor:
+public Appliance(String brand, double powerUsage, boolean isOn): Initializes the brand, powerUsage, and isOn fields.
+Public Methods:
+public String getBrand(): Returns the brand.
+public double getPowerUsage(): Returns the power usage.
+public boolean isOn(): Returns if the appliance is on.
+public void setBrand(String brand): Sets the brand.
+public void setPowerUsage(double powerUsage): Sets the power usage.
+public void togglePower(): Toggles the isOn field.
+public void printInfo(): Prints details in the format "Appliance {brand} uses {powerUsage} watts and is currently (on/off)."
+ 
+
+Subclass - WashingMachine (extends Appliance):
+
+Private Field:
+private int washCycles: Tracks the number of wash cycles completed.
+Constructor:
+public WashingMachine(String brand, double powerUsage): Initializes the brand and power usage using the Appliance constructor and sets washCycles to 0.
+Public Methods:
+public void startWashCycle(): Starts a wash cycle and increments washCycles by 1.
+public int getWashCycles(): Returns the count of washCycles.
+@Override public void printInfo(): Prints details in the format "WashingMachine {brand} has completed {washCycles} wash cycles."
