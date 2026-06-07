@@ -1,0 +1,55 @@
+For this program, you are tasked to define the following:
+Class - House:
+
+Private Fields:
+private String location: Represents the location of the house.
+private double price: Holds the price of the house.
+private int bedrooms: Represents the number of bedrooms in the house.
+Constructor:
+public House(String location, double price, int bedrooms): Initializes the location, price, and bedrooms fields. If bedrooms is set to a value less than 1, set it to 1.
+Public Getter Methods:
+public String getLocation(): Returns the house's location.
+public double getPrice(): Returns the house's price.
+public int getBedrooms(): Returns the number of bedrooms.
+Public Setter Methods:
+public void setLocation(String location): Sets the house's location.
+public void setPrice(double price): Sets the house's price.
+public void setBedrooms(int bedrooms): Sets the number of bedrooms. If the value is less than 1, sets it to 1.
+ToString Method:
+@Override public String toString(): Returns a formatted string in the format "House in (location) - P(price, formatted to two decimal places) - (bedrooms) bedrooms".
+Example Strings:
+For a house in Los Angeles priced at 500,000.00 with 3 bedrooms: "House in Los Angeles - P500000.00 - 3 bedrooms".
+For a house in New York priced at 750,000.00 with 5 bedrooms: "House in New York - P750000.00 - 5 bedrooms".
+
+
+Sample Output 1
+
+Action: Invoking the constructor House(String, double, int).
+Output:
+Bedrooms: 3
+Location: Manila
+Price: 5000000.0
+
+
+Sample Output 2
+
+Action: Testing getter methods of House.
+Output:
+Testing Getters:
+Location: Quezon City
+Price: 3500000.0
+Bedrooms: 2
+
+
+Sample Output 3
+
+Action: Testing setter methods of House.
+Output:
+Before setting new values:
+Location: Cebu
+Price: 4500000.0
+Bedrooms: 4
+After setting new values:
+Location: Davao
+Price: 6000000.0
+Bedrooms: 5
