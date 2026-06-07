@@ -1,0 +1,202 @@
+// PROBLEM
+// Create a Java program that manages a simple book catalog for a library. You must create only ONE class named Book. In the main() method, create an array of Book objects. The program should allow the user to:
+
+// Add a book
+// Display all books
+// Update book availability
+// Exit
+// For each book, the program must display:
+
+// Book title
+// Author name
+// Year published
+// Number of copies available
+// Availability status (Available / Unavailable)
+// Class Requirements
+
+// Class Name: Book
+// Attributes (all private):
+
+// title (String)
+// author (String)
+// yearPublished (int)
+// copiesAvailable (int)
+// status (String)
+// Constructor:
+
+// Accept title, author, yearPublished, and copiesAvailable as parameters
+// Must call setter methods for yearPublished and copiesAvailable instead of assigning directly
+// title and author are assigned directly using this
+// status is automatically set to "Available" when a book is first added
+// Required Methods (all public):
+
+// getTitle() — returns title
+// getAuthor() — returns author
+// getYearPublished() — returns yearPublished
+// getCopiesAvailable() — returns copiesAvailable
+// getStatus() — returns status
+// setTitle(String title) — sets title; reject if empty
+// setAuthor(String author) — sets author; reject if empty
+// setYearPublished(int year) — sets year; reject if year < 1000 or year > 2025
+// setCopiesAvailable(int copies) — sets copies; reject if copies < 0
+// updateStatus(String newStatus) — calls setStatus() internally; only accepts "Available" or "Unavailable", rejects any other value
+// displayBook() — prints all five fields with clean formatting
+// Note: A private setStatus() helper used inside updateStatus() is encouraged but does not count as one of the 11 required methods.
+
+// Exception Handling
+
+// Wrap the main menu loop with a try-catch block to handle:
+
+// InputMismatchException — when the user enters a non-integer for any numeric input
+// ArrayIndexOutOfBoundsException — when the user enters a book number that does not exist
+// A general Exception catch block for unexpected errors
+// A finally block that prints a separator line after every action
+// Remember to call input.nextLine() after catching an InputMismatchException to clear the scanner buffer, and reset your choice variable so the loop does not exit accidentally.
+
+// Additional Constraints
+
+// Maximum of 5 books in the array (fixed size)
+// Program loops until the user selects option 4 (Exit)
+// When displaying all books, print a numbered list using the index
+// When updating availability, show the list of books first so the user can pick by number
+ 
+
+// Sample Output 1
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 2
+// No books recorded.
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 5
+// Invalid choice. Enter 1 to 4 only.
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: A
+// Error: please enter a number.
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 4
+// Exiting program. Goodbye!
+// ---- end of action ----
+
+
+// Sample Output 2
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 1
+// Enter book title: Mathematics
+// Enter author: John Doe
+// Enter year published (1000-2025): 2020
+// Enter number of copies: 3
+// Book added successfully!
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 1
+// Enter book title: English
+// Enter author: James Bond
+// Enter year published (1000-2025): 3000
+// Invalid year. Must be between 1000 and 2025.
+// Enter year published (1000-2025): 2015
+// Enter number of copies: 5
+// Book added successfully!
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 2
+
+// ===== ALL BOOKS =====
+// [1]
+// Title           : Mathematics
+// Author          : John Doe
+// Year Published  : 2020
+// Copies Available: 3
+// Status          : Available
+// ----------------------------
+// [2]
+// Title           : English
+// Author          : James Bond
+// Year Published  : 2015
+// Copies Available: 5
+// Status          : Available
+// ----------------------------
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 3
+
+// ===== SELECT BOOK =====
+// [1] Mathematics - Available
+// [2] English - Available
+// Enter book number: 2
+// Enter new status (Available / Unavailable): Unavailable
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 2
+
+// ===== ALL BOOKS =====
+// [1]
+// Title           : Mathematics
+// Author          : John Doe
+// Year Published  : 2020
+// Copies Available: 3
+// Status          : Available
+// ----------------------------
+// [2]
+// Title           : English
+// Author          : James Bond
+// Year Published  : 2015
+// Copies Available: 5
+// Status          : Unavailable
+// ----------------------------
+// ---- end of action ----
+
+// ===== LIBRARY BOOK SYSTEM =====
+// 1 - Add Book
+// 2 - Display All Books
+// 3 - Update Book Availability
+// 4 - Exit
+// Enter choice: 4
+// Exiting program. Goodbye!
+// ---- end of action ----
+
+
