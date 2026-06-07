@@ -1,0 +1,113 @@
+PROBLEM
+
+Create a Java program that manages a simple fruit store inventory. 
+You must create only ONE class named Fruit. In the main() method, create an array of 
+Fruit objects. The program should allow the user to:
+
+Add a fruit
+Display all fruits
+Exit
+For each fruit, the program must display:
+
+Fruit name
+Price per kilo
+Quantity in stock (kg)
+Class Requirements
+
+Class Name:
+
+Fruit
+Attributes:
+
+name (String)
+pricePerKilo (double)
+quantity (double)
+Constructor:
+
+Accept name, pricePerKilo, and quantity
+Required Methods:
+
+displayFruit()
+
+Displays name, price per kilo, and quantity (both formatted to 2 decimal places)
+getTotalValue()
+
+Returns pricePerKilo * quantity as a double
+This is the total stock value of that fruit
+Additional Requirements
+
+Maximum of 5 fruits (use a plain array, no ArrayList)
+Use a do-while loop for the main menu
+Use switch-case for option handling
+ 
+Sample Output 1
+
+
+===== FRUIT STORE INVENTORY =====
+1 - Add Fruit
+2 - Display All Fruits
+3 - Exit
+Enter choice: 2
+No fruits recorded.
+
+===== FRUIT STORE INVENTORY =====
+1 - Add Fruit
+2 - Display All Fruits
+3 - Exit
+Enter choice: A
+Invalid input. Please enter the correct type.
+
+===== FRUIT STORE INVENTORY =====
+1 - Add Fruit
+2 - Display All Fruits
+3 - Exit
+Enter choice: 3
+Exiting program. Goodbye!
+Sample Output 2
+
+
+===== FRUIT STORE INVENTORY =====
+1 - Add Fruit
+2 - Display All Fruits
+3 - Exit
+Enter choice: 1
+Enter fruit name: Grapes
+Enter price per kilo: 130
+Enter quantity (kg): 5
+Fruit added successfully!
+
+===== FRUIT STORE INVENTORY =====
+1 - Add Fruit
+2 - Display All Fruits
+3 - Exit
+Enter choice: 1
+Enter fruit name: Mango
+Enter price per kilo: 170
+Enter quantity (kg): 10
+Fruit added successfully!
+
+===== FRUIT STORE INVENTORY =====
+1 - Add Fruit
+2 - Display All Fruits
+3 - Exit
+Enter choice: 2
+
+===== ALL FRUITS =====
+[1]
+Name           : Grapes
+Price per Kilo : 130.00
+Quantity (kg)  : 5.00
+----------------------------
+[2]
+Name           : Mango
+Price per Kilo : 170.00
+Quantity (kg)  : 10.00
+----------------------------
+Total Stock Value: PHP 2,350.00
+
+===== FRUIT STORE INVENTORY =====
+1 - Add Fruit
+2 - Display All Fruits
+3 - Exit
+Enter choice: 3
+Exiting program. Goodbye!
