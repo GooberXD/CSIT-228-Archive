@@ -1,0 +1,53 @@
+For this program, you are tasked to define the following:
+Interface - IDrawable:
+
+Method:
+void draw(): Defines a method to draw the shape, which must be implemented by classes that implement this interface.
+Class - InvalidShapeException (extends Exception):
+
+Constructor:
+public InvalidShapeException(): Calls the superclass constructor with the message "Invalid shape parameters."
+ 
+
+Abstract Class - Shape (implements IDrawable):
+
+Private Field:
+private String color: Represents the color of the shape.
+Constructor:
+public Shape(String color): Initializes the color field.
+Abstract Method:
+public abstract void draw(): An abstract method to be implemented by subclasses.
+Public Method:
+public String getColor(): Returns the color.
+ 
+
+Class - Circle (extends Shape):
+
+Private Field:
+private double radius: Represents the radius of the circle.
+Constructor:
+public Circle(String color, double radius): Initializes the color and radius fields. Throws an InvalidShapeException if radius is less than or equal to 0.
+Public Method:
+@Override public void draw(): Prints "Drawing a {color} circle with radius {radius}."
+ 
+
+Class - Rectangle (extends Shape):
+
+Private Fields:
+private double width: Represents the width of the rectangle.
+private double height: Represents the height of the rectangle.
+Constructor:
+public Rectangle(String color, double width, double height): Initializes the color, width, and height fields. Throws an InvalidShapeException if width or height is less than or equal to 0.
+Public Method:
+@Override public void draw(): Prints "Drawing a {color} rectangle of width {width} and height {height}."
+ 
+
+Class - ShapeDrawer:
+
+Private Field:
+private ArrayList<Shape> shapes: A list to store shapes.
+Constructor:
+public ShapeDrawer(): Initializes shapes as an empty ArrayList to hold shapes.
+Public Methods:
+public void insertShape(Shape shape): Adds a shape to the shapes list.
+public void drawShapes(): Iterates over the shapes list, calling the draw() method for each shape to draw all inserted shapes.
