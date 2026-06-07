@@ -1,5 +1,8 @@
 PROBLEM
-Create a Java program that manages a simple book catalog for a library. You must create only ONE class named Book. In the main() method, create an array of Book objects. The program should allow the user to:
+Create a Java program that manages a simple book catalog for a library. 
+You must create only ONE class named Book. 
+In the main() method, create an array of Book objects. 
+The program should allow the user to:
 
 Add a book
 Display all books

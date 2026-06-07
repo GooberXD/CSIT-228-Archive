@@ -1,0 +1,84 @@
+Create a comprehensive OOP Java program for the OOP Electric Cooperative that utilizes a 
+single interface and a unified computation class to handle utility billing. 
+The application must feature an interface named ElectricityBilling that mandates the 
+implementation of methods for calculating total costs, retrieving customer category labels, 
+and displaying formatted billing statements. You are required to create ComputeBilling class 
+that stores the customer's name, kilowatt-hour usage, and type identifier to distinguish 
+between Residential (₱12.57/kWh) and Commercial (₱11.71/kWh) accounts. 
+Within the Main class, implement a user-driven menu that utilizes class-level variables 
+for input storage and employs isEnabled boolean flags within while loops to validate that 
+all numerical entries are non-negative and non-string values. The final output must 
+bypass standard floating-point formatting in favor of the DecimalFormat class to ensure 
+all monetary values are displayed with the Philippine Peso symbol and precisely two 
+decimal places, demonstrating a strict adherence to the principles of encapsulation, 
+abstraction, and polymorphism.
+
+
+Sample Output 1
+
+OOP ELECTRIC COOPERATIVE - BILLING SYSTEM
+[1] Residential (₱12.57/kWh)
+[2] Commercial  (₱11.71/kWh)
+Select Type: 3
+>> Error: Please select 1 or 2.
+Select Type: text
+>> Error: Invalid entry. Please enter a number.
+Select Type: 1
+Enter Name: Buh
+Enter Usage (kWh): 13
+
+==========================================
+       OOP ELECTRIC COOPERATIVE
+           OFFICIAL RECEIPT
+==========================================
+Account Type : Residential
+Account Name : Buh
+Total Usage  : 13.0 kWh
+Rate per kWh : ₱12.57
+------------------------------------------
+TOTAL DUE    : ₱163.41
+==========================================
+
+
+Sample Output 2
+
+OOP ELECTRIC COOPERATIVE - BILLING SYSTEM
+[1] Residential (₱12.57/kWh)
+[2] Commercial  (₱11.71/kWh)
+Select Type: 2
+Enter Name: Buh2
+Enter Usage (kWh): 25
+
+==========================================
+       OOP ELECTRIC COOPERATIVE
+           OFFICIAL RECEIPT
+==========================================
+Account Type : Commercial
+Account Name : Buh2
+Total Usage  : 25.0 kWh
+Rate per kWh : ₱11.71
+------------------------------------------
+TOTAL DUE    : ₱292.75
+==========================================
+
+
+Sample Output 3
+
+OOP ELECTRIC COOPERATIVE - BILLING SYSTEM
+[1] Residential (₱12.57/kWh)
+[2] Commercial  (₱11.71/kWh)
+Select Type: 2
+Enter Name: Buh3 is Bug
+Enter Usage (kWh): 0
+
+==========================================
+       OOP ELECTRIC COOPERATIVE
+           OFFICIAL RECEIPT
+==========================================
+Account Type : Commercial
+Account Name : Buh3 is Bug
+Total Usage  : 0.0 kWh
+Rate per kWh : ₱11.71
+------------------------------------------
+TOTAL DUE    : ₱0.00
+==========================================
