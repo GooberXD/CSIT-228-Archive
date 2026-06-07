@@ -1,0 +1,28 @@
+For this program, you are tasked to define the following:
+Class - Vehicle:
+
+Public Fields:
+String make: Represents the make of the vehicle.
+String model: Represents the model of the vehicle.
+Constructor:
+Vehicle(String make, String model): Accepts a string parameter for the make and model and assigns them to the respective fields.
+ 
+
+Class - Driver:
+
+Public Fields:
+String name: Represents the name of the driver.
+int age: Represents the age of the driver.
+Constructor:
+Driver(String name, int age): Accepts a string for the driver's name and an integer for their age and assigns them to the respective fields.
+ 
+
+Class - DrivingLicense:
+
+Public Fields:
+Vehicle vehicle: Holds an instance of the Vehicle class representing the driver's vehicle.
+Driver driver: Holds an instance of the Driver class representing the driver.
+Default Constructor:
+DrivingLicense(): Does not accept any parameters. Sets both the vehicle and driver fields to null and prints "No vehicle or driver assigned."
+Parameterized Constructor:
+DrivingLicense(Vehicle vehicle, Driver driver): Accepts Vehicle and Driver objects as parameters and assigns these objects to the vehicle and driver fields, respectively.
