@@ -1,0 +1,35 @@
+Class - Employee:
+
+Private Fields:
+private String name: Represents the name of the employee.
+private double baseSalary: Represents the base salary of the employee.
+Public Constructor:
+public Employee(String name, double baseSalary): Initializes the name and baseSalary fields.
+Public Methods:
+public double calculateBonus(): A method to calculate the bonus based on the employee's base salary, intended to be overridden in derived classes.
+public String getName(): Returns the employee’s name.
+public double getBaseSalary(): Returns the employee’s base salary.
+ 
+
+Class - Manager (extends Employee):
+
+Constructor:
+public Manager(String name, double baseSalary): Calls the superclass constructor with name and baseSalary.
+Public Method:
+@Override public double calculateBonus(): Calculates the bonus as 20% of the base salary.
+ 
+
+Class - Developer (extends Employee):
+
+Constructor:
+public Developer(String name, double baseSalary): Calls the superclass constructor with name and baseSalary.
+Public Method:
+@Override public double calculateBonus(): Calculates the bonus as 15% of the base salary.
+ 
+
+Class - Intern (extends Employee):
+
+Constructor:
+public Intern(String name, double baseSalary): Calls the superclass constructor with name and baseSalary.
+Public Method:
+@Override public double calculateBonus(): Calculates the bonus as 5% of the base salary.
